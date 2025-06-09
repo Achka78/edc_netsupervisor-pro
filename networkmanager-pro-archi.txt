@@ -1,0 +1,152 @@
+networkmanager-pro/
+├── 📄 .env.example                           # Variables d'environnement exemple
+├── 📄 .eslintrc.js                          # Configuration ESLint
+├── 📄 .gitignore                            # Fichiers à ignorer par Git
+├── 📄 .prettierrc.js                       # Configuration Prettier
+├── 📄 babel.config.js                      # Configuration Babel
+├── 📄 CHANGELOG.md                         # Historique des versions
+├── 📄 cypress.config.js                    # Configuration Cypress E2E
+├── 📄 docker-compose.yml                   # Orchestration des conteneurs
+├── 📄 Dockerfile                           # Image Docker de l'application
+├── 📄 jest.config.js                       # Configuration Jest
+├── 📄 jest.setup.client.js                 # Setup Jest pour le client
+├── 📄 jest.setup.js                        # Setup Jest global
+├── 📄 jest.setup.server.js                 # Setup Jest pour le serveur
+├── 📄 LICENSE                              # Licence MIT
+├── 📄 package.json                         # Configuration npm principale
+├── 📄 quick-start.sh                       # Script d'installation rapide
+├── 📄 README.md                            # Documentation principale
+│
+├── 📂 .github/                             # GitHub Actions et templates
+│   └── 📂 workflows/
+│       └── 📄 ci-cd.yml                    # Pipeline CI/CD
+│
+├── 📂 backups/                             # Répertoire des sauvegardes
+│   └── 📄 .gitkeep                         # Garder le dossier vide
+│
+├── 📂 client/                              # Application React frontend
+│   ├── 📄 package.json                     # Dépendances React
+│   ├── 📂 public/                          # Fichiers statiques
+│   │   ├── 📄 index.html                   # Template HTML principal
+│   │   ├── 📄 manifest.json                # Manifest PWA
+│   │   └── 📄 robots.txt                   # Robots.txt
+│   └── 📂 src/                             # Code source React
+│       ├── 📄 App.js                       # Composant App principal
+│       ├── 📄 index.js                     # Point d'entrée React
+│       ├── 📂 components/                  # Composants réutilisables
+│       │   ├── 📂 Layout/
+│       │   │   └── 📄 MainLayout.js        # Layout principal avec sidebar
+│       │   └── 📂 ui/
+│       │       └── 📄 index.js             # Composants UI (Button, Input, etc.)
+│       ├── 📂 hooks/                       # Hooks React personnalisés
+│       │   ├── 📄 useAuth.js               # Hook d'authentification
+│       │   └── 📄 useSocket.js             # Hook WebSocket
+│       ├── 📂 i18n/                        # Internationalisation
+│       │   ├── 📄 index.js                 # Configuration i18n
+│       │   └── 📂 locales/
+│       │       ├── 📂 en/
+│       │       │   └── 📄 translation.json # Traductions anglaises
+│       │       └── 📂 fr/
+│       │           └── 📄 translation.json # Traductions françaises
+│       ├── 📂 pages/                       # Pages de l'application
+│       │   ├── 📂 Auth/
+│       │   │   └── 📄 LoginPage.js         # Page de connexion
+│       │   ├── 📂 Commands/
+│       │   │   └── 📄 CommandsPage.js      # Page d'exécution de commandes
+│       │   ├── 📂 Documents/
+│       │   │   └── 📄 DocumentsPage.js     # Page de génération de documents
+│       │   ├── 📂 Network/
+│       │   │   └── 📄 NetworkTopology.js   # Visualisation topologie réseau
+│       │   ├── 📂 Security/
+│       │   │   └── 📄 SecurityOverview.js  # Vue d'ensemble sécurité
+│       │   ├── 📂 Settings/
+│       │   │   └── 📄 SettingsPage.js      # Page de configuration
+│       │   └── 📄 Dashboard.js             # Dashboard principal
+│       ├── 📂 services/                    # Services API
+│       │   └── 📄 api.js                   # Service API centralisé
+│       ├── 📂 store/                       # État global Redux
+│       │   ├── 📄 store.js                 # Configuration Redux store
+│       │   └── 📂 slices/
+│       │       ├── 📄 authSlice.js         # Slice authentification
+│       │       ├── 📄 dashboardSlice.js    # Slice dashboard
+│       │       └── 📄 devicesSlice.js      # Slice gestion équipements
+│       ├── 📂 tests/                       # Tests React
+│       │   └── 📄 components.test.js       # Tests composants React
+│       └── 📂 utils/
+│           └── 📄 cn.js                    # Utilitaire classes CSS
+│
+├── 📂 coverage/                            # Rapports de couverture de tests
+│   └── 📄 .gitkeep                         # Garder le dossier vide
+│
+├── 📂 cypress/                             # Tests End-to-End
+│   ├── 📂 e2e/
+│   │   └── 📄 networkmanager.cy.js        # Tests E2E principaux
+│   ├── 📂 fixtures/                       # Données de test
+│   │   └── 📄 .gitkeep
+│   ├── 📂 screenshots/                    # Screenshots des tests
+│   │   └── 📄 .gitkeep
+│   ├── 📂 support/                        # Support Cypress
+│   │   └── 📄 .gitkeep
+│   └── 📂 videos/                         # Vidéos des tests
+│       └── 📄 .gitkeep
+│
+├── 📂 logs/                               # Fichiers de logs
+│   └── 📄 .gitkeep                        # Garder le dossier vide
+│
+├── 📂 monitoring/                         # Configuration monitoring
+│   ├── 📂 grafana/
+│   │   ├── 📂 dashboards/
+│   │   │   └── 📄 networkmanager-overview.json # Dashboard Grafana principal
+│   │   └── 📂 datasources/
+│   │       └── 📄 prometheus.yml          # Configuration datasource
+│   ├── 📄 prometheus.yml                  # Configuration Prometheus
+│   └── 📂 rules/
+│       └── 📄 alerts.yml                  # Règles d'alerting
+│
+├── 📂 nginx/                              # Configuration Nginx
+│   ├── 📂 conf.d/                         # Configurations virtualhosts
+│   │   └── 📄 .gitkeep
+│   └── 📄 nginx.conf                      # Configuration Nginx principale
+│
+├── 📂 scripts/                            # Scripts utilitaires
+│   ├── 📄 backup.sh                       # Script de sauvegarde automatique
+│   ├── 📄 install.sh                      # Script d'installation
+│   ├── 📄 maintenance.sh                  # Script de maintenance
+│   └── 📄 mongo-init.js                   # Script d'initialisation MongoDB
+│
+├── 📂 server/                             # Application Node.js backend
+│   ├── 📄 package.json                    # Dépendances serveur
+│   ├── 📄 server.js                       # Serveur principal Express
+│   ├── 📂 middleware/                     # Middlewares Express
+│   │   └── 📄 auth.js                     # Middleware d'authentification
+│   ├── 📂 models/                         # Modèles MongoDB
+│   │   ├── 📄 Device.js                   # Modèle équipements réseau
+│   │   └── 📄 User.js                     # Modèle utilisateur
+│   ├── 📂 routes/                         # Routes API Express
+│   │   ├── 📄 auth.js                     # Routes authentification
+│   │   ├── 📄 commands.js                 # Routes exécution commandes
+│   │   ├── 📄 config.js                   # Routes configuration système
+│   │   ├── 📄 devices.js                  # Routes gestion équipements
+│   │   ├── 📄 discovery.js                # Routes découverte réseau
+│   │   ├── 📄 documents.js                # Routes génération documents
+│   │   └── 📄 network.js                  # Routes gestion réseau
+│   ├── 📂 services/                       # Services métier
+│   │   ├── 📄 CommandExecutor.js          # Service exécution commandes
+│   │   ├── 📄 DocumentGenerator.js        # Générateur de documents
+│   │   ├── 📄 NetworkDiscovery.js         # Service découverte réseau
+│   │   ├── 📄 SecurityMonitor.js          # Supervision sécurité
+│   │   └── 📄 TopologyManager.js          # Gestionnaire topologie
+│   ├── 📂 tests/                          # Tests serveur
+│   │   └── 📄 api.test.js                 # Tests API unitaires
+│   ├── 📂 utils/                          # Utilitaires serveur
+│   │   └── 📄 helpers.js                  # Fonctions utilitaires
+│   └── 📂 validation/                     # Validation des données
+│       └── 📄 schemas.js                  # Schémas de validation Joi
+│
+├── 📂 ssl/                                # Certificats SSL
+│   ├── 📄 cert.pem                        # Certificat SSL
+│   ├── 📄 key.pem                         # Clé privée SSL
+│   └── 📄 .gitkeep                        # Garder le dossier vide
+│
+└── 📂 uploads/                            # Fichiers uploadés
+    └── 📄 .gitkeep                        # Garder le dossier vide
